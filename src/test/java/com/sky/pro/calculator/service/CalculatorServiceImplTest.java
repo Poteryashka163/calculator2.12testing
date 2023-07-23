@@ -61,9 +61,9 @@ class CalculatorServiceImplTest {
     void division2_success() {
         int num1 = 6;
         int num2 = 0;
-        String expectedResult = "На ноль делить нельзя!";
-        Exception actualResult =assertThrows(IllegalArgumentException.class,() -> out.division(num1,num2));
-        assertEquals(expectedResult,actualResult);
+        String expectedResult ="На ноль делить нельзя!";
+        Exception exception =assertThrows(IllegalArgumentException.class,() -> out.division(num1,num2));
+        assertEquals(expectedResult,exception.getMessage());
 
     }
 
